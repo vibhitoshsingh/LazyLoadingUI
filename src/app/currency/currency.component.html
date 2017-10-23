@@ -1,0 +1,15 @@
+<div class="col-md-8 col-md-offset-2">
+  <div class="form-group">
+    <h2 style="color:Crimson">Currency exchange rates with respect to Euro</h2>
+    <label for="id_currency" style="color:#3498DB">Currency</label>
+    <!--<input type="id_currency" (change)="callCurrencyService()" id="id_currency" name="id_currencyemail" ngModel class="form-control"> -->
+    <input type="text" [(ngModel)]="id_currency" (change)="callCurrencyService()" class="form-control" placeholder="Enter Currency Symbol. Example: GBP(,AUD,INR)...">
+    <br><br>
+    <h3 style="color:#3498DB">Rate Details</h3>
+    <br>
+    <p class="well lead">Exchange rate relative to Euro in a JSON format: : {{ this.my_result }} </p>
+    <p class="text-info">Total # of currency service requests made :
+      <span class="badge">{{this._currencyService.totReqsMade}}</span>
+    </p>
+  </div>
+</div>
